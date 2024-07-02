@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+body {
+  background: rgba(247, 247, 247, 1);
+  font-family: "Roboto", sans-serif;
+}
+
 input,
 button,
 textarea,
@@ -21,4 +26,267 @@ button {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* form__container */
+.form__container {
+  max-width: 1170px;
+  margin: 55px auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 35px 35px 16px;
+  max-width: 570px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+}
+
+.form--profile {
+  padding-bottom: 104px;
+}
+
+/* form__title */
+.form__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 133%;
+
+  color: rgba(28, 28, 28, 1);
+}
+
+/* form__group */
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form__group--inline {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.form__group--inline-profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* form__label */
+.form__label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 146%;
+
+  color: rgba(84, 84, 84, 1);
+}
+
+.form__input {
+  padding: 10px 7px;
+}
+
+.form__input,
+.form__select {
+  width: 245px;
+  border: 1px solid rgba(228, 228, 228, 1);
+  border-radius: 4px;
+}
+
+.form__button,
+.form__input,
+.form__select {
+  height: 38px;
+}
+
+.form__input:hover,
+.form__select:hover {
+  border-color: rgba(0, 123, 255, 1);
+}
+
+.form__input--email,
+.form__button {
+  width: 500px;
+}
+
+/* form__text */
+.form__text {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 138%;
+
+  color: rgba(150, 150, 150, 1);
+}
+
+.form__text--terms {
+  margin-top: 2px;
+  text-align: center;
+
+  border-bottom: 1px solid rgba(228, 228, 228, 1);
+  padding-bottom: 20px;
+}
+
+/* link */
+.link {
+  text-decoration: none;
+  color: rgba(0, 123, 255, 1);
+}
+
+/* form__login */
+.form__login {
+  text-align: center;
+}
+
+.form__login--link {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 146%;
+}
+
+.form__login--text {
+  color: rgba(84, 84, 84, 1);
+  margin-right: 20px;
+}
+
+/* form select */
+.form__select {
+  position: relative;
+
+  background: url(images/Color.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding: 10px;
+
+  appearance: none;
+  color: rgba(84, 84, 84, 1);
+}
+
+/* form radio*/
+.form__group--radio {
+  display: flex;
+  gap: 20px;
+}
+
+.radio {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.input__radio {
+  display: none;
+  margin-right: 8px;
+}
+
+.span__radio {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  color: rgba(84, 84, 84, 1);
+}
+
+.span__radio::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(228, 228, 228, 1);
+}
+
+.span__radio::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  border-radius: 50%;
+  top: 6px;
+  left: 6px;
+  opacity: 0;
+  transform: scale(0, 0);
+}
+
+.input__radio:checked + .span__radio::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.input__radio:checked + .span__radio::before {
+  background: rgba(0, 123, 255, 1);
+}
+
+/* file-upload */
+input[type="file"] {
+  display: none;
+}
+
+.form__label--file-upload {
+  width: 138px;
+  height: 30px;
+  border: 1px solid rgba(228, 228, 228, 1);
+  border-radius: 4px;
+
+  background: url(images/Camera.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding: 10px;
+
+  cursor: pointer;
+}
+
+.form__label--file-upload:hover,
+.form__button--reset-file:hover {
+  border-color: rgba(0, 123, 255, 1);
+}
+
+/* form__button */
+.form__button {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 146%;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(0, 123, 255, 1);
+  border: 1px solid rgba(228, 228, 228, 1);
+  border-radius: 5px;
+}
+
+.form__button:hover {
+  opacity: 0.7;
+}
+
+.form__button--reset-file {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(228, 228, 228, 1);
+  border-radius: 4px;
+  background-color: white;
+  background: url(images/Trash.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.form__button--profile {
+  width: 150px;
+}
+
+.form__userpic {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
 }
