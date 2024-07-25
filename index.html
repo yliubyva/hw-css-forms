@@ -1,11 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>HW - forms</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <main class="main">
+      <div class="form__container">
+        <form action="" method="get" class="form form--create-an-account">
+          <h2 class="form__title">Create an Account</h2>
+
+          <div class="form__group--inline">
+            <div class="form__group">
+              <label for="f-name" class="form__label">First Name</label>
+              <input
+                id="f-name"
+                type="text"
+                name="name"
+                class="input"
+                required
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="l-name" class="form__label">Last Name</label>
+              <input id="l-name" type="text" name="last-name" class="input" />
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label for="email" class="form__label">E-mail</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              class="input input--email"
+              required
+            />
+            <p class="form__text">
+              We'll never share your email with anyone else.
+            </p>
+          </div>
+
+          <div class="form__group--radio">
+            <label class="radio">
+              <input
+                checked
+                name="sex"
+                value="male"
+                type="radio"
+                class="input__radio"
+              />
+              <span class="span__radio">Male</span>
+            </label>
+
+            <label class="radio">
+              <input
+                name="sex"
+                value="female"
+                type="radio"
+                class="input__radio"
+              />
+              <span class="span__radio">Female</span>
+            </label>
+          </div>
+
+          <div class="form__group--inline">
+            <div class="form__group">
+              <label for="country" class="form__label">Country</label>
+              <select id="country" name="country" class="form__select">
+                <option value="" disabled selected>Select</option>
+                <option value="ukraine">Ukraine</option>
+                <option value="poland">Poland</option>
+                <option value="germany">Germany</option>
+                <option value="france">France</option>
+                <option value="italy">Italy</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label for="city" class="form__label">City</label>
+              <input name="city" type="text" id="city" class="input" />
+            </div>
+          </div>
+
+          <button type="submit" class="button">Sign Up</button>
+
+          <p class="form__text form__text--terms">
+            By clicking the 'Sign Up' button, you confirm that you accept our<br />
+            <a href="" class="link">Terms of Use</a> and
+            <a href="" class="link">Privacy Policy</a>.
+          </p>
+
+          <div class="form__login">
+            <span class="form__login--text">Have an account?</span>
+            <a href="" class="link form__login--link">Log In</a>
+          </div>
+        </form>
+
+        <div class="container">
+          <form class="form form--profile-photo">
+            <h2 class="form__title">Profile</h2>
+            <div class="form__group--inline-profile">
+              <div class="form__avatar">
+                <img
+                  src="images/Image.png"
+                  alt="photo-profile"
+                  class="avatar"
+                />
+              </div>
+
+              <div class="form__group">
+                <div class="form__group--inline">
+                  <label class="form__label--file-upload">
+                    <input type="file" id="file" class="input" accept="" />
+                  </label>
+                  <button type="reset" class="button--reset-file"></button>
+                </div>
+
+                <p class="form__text">Up to 1 MB (300x300 px)</p>
+              </div>
+            </div>
+          </form>
+
+          <form class="form form--profile">
+            <div class="form__group--inline">
+              <div class="form__group">
+                <label for="name" class="form__label">Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  required
+                  class="input"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="e-mail" class="form__label">E-mail</label>
+                <input id="e-mail" type="email" name="email" class="input" />
+              </div>
+            </div>
+
+            <div class="form__group--inline">
+              <div class="form__group">
+                <label for="country--profile" class="form__label"
+                  >Country</label
+                >
+                <select
+                  id="country--profile"
+                  name="country"
+                  class="form__select"
+                >
+                  <option value="" disabled selected>Select</option>
+                  <option value="ukraine">Ukraine</option>
+                  <option value="poland">Poland</option>
+                  <option value="germany">Germany</option>
+                  <option value="france">France</option>
+                  <option value="italy">Italy</option>
+                </select>
+              </div>
+
+              <div class="form__group">
+                <label for="city--profile" class="form__label">City</label>
+                <input
+                  name="city"
+                  type="text"
+                  id="city--profile"
+                  class="input"
+                />
+              </div>
+            </div>
+
+            <div class="form__group--inline">
+              <div class="form__group">
+                <label for="zip" class="form__label">Zip Code</label>
+                <input
+                  name="zip"
+                  type="text"
+                  id="zip"
+                  pattern="[0-9]{5}"
+                  placeholder="10001"
+                  class="input"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="tel" class="form__label">Phone Number</label>
+                <input
+                  name="phone"
+                  id="tel"
+                  type="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  placeholder="123-456-7890"
+                  class="input"
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="button button--profile">Update</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
