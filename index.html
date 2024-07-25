@@ -25,19 +25,14 @@
                 id="f-name"
                 type="text"
                 name="name"
-                class="form__input"
+                class="input"
                 required
               />
             </div>
 
             <div class="form__group">
               <label for="l-name" class="form__label">Last Name</label>
-              <input
-                id="l-name"
-                type="text"
-                name="last-name"
-                class="form__input"
-              />
+              <input id="l-name" type="text" name="last-name" class="input" />
             </div>
           </div>
 
@@ -47,7 +42,7 @@
               id="email"
               type="email"
               name="email"
-              class="form__input form__input--email"
+              class="input input--email"
               required
             />
             <p class="form__text">
@@ -93,11 +88,11 @@
 
             <div class="form__group">
               <label for="city" class="form__label">City</label>
-              <input name="city" type="text" id="city" class="form__input" />
+              <input name="city" type="text" id="city" class="input" />
             </div>
           </div>
 
-          <button type="submit" class="form__button">Sign Up</button>
+          <button type="submit" class="button">Sign Up</button>
 
           <p class="form__text form__text--terms">
             By clicking the 'Sign Up' button, you confirm that you accept our<br />
@@ -115,26 +110,20 @@
           <form class="form form--profile-photo">
             <h2 class="form__title">Profile</h2>
             <div class="form__group--inline-profile">
-              <img
-                src="images/Image.png"
-                alt="photo-profile"
-                class="form__userpic"
-              />
+              <div class="form__avatar">
+                <img
+                  src="images/Image.png"
+                  alt="photo-profile"
+                  class="avatar"
+                />
+              </div>
 
               <div class="form__group">
                 <div class="form__group--inline">
                   <label class="form__label--file-upload">
-                    <input
-                      type="file"
-                      id="file"
-                      class="form__input"
-                      accept=""
-                    />
+                    <input type="file" id="file" class="input" accept="" />
                   </label>
-                  <button
-                    type="reset"
-                    class="form__button--reset-file"
-                  ></button>
+                  <button type="reset" class="button--reset-file"></button>
                 </div>
 
                 <p class="form__text">Up to 1 MB (300x300 px)</p>
@@ -151,18 +140,13 @@
                   type="text"
                   name="name"
                   required
-                  class="form__input"
+                  class="input"
                 />
               </div>
 
               <div class="form__group">
                 <label for="e-mail" class="form__label">E-mail</label>
-                <input
-                  id="e-mail"
-                  type="email"
-                  name="email"
-                  class="form__input"
-                />
+                <input id="e-mail" type="email" name="email" class="input" />
               </div>
             </div>
 
@@ -191,7 +175,7 @@
                   name="city"
                   type="text"
                   id="city--profile"
-                  class="form__input"
+                  class="input"
                 />
               </div>
             </div>
@@ -205,7 +189,7 @@
                   id="zip"
                   pattern="[0-9]{5}"
                   placeholder="10001"
-                  class="form__input"
+                  class="input"
                 />
               </div>
 
@@ -217,14 +201,12 @@
                   type="tel"
                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                   placeholder="123-456-7890"
-                  class="form__input"
+                  class="input"
                 />
               </div>
             </div>
 
-            <button type="submit" class="form__button form__button--profile">
-              Update
-            </button>
+            <button type="submit" class="button button--profile">Update</button>
           </form>
         </div>
       </div>
